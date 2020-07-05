@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Article preview component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: hsl(210, 46%, 95%);
+      font-family: 'Manrope';
+      font-size: 13px;
+      letter-spacing: 1.5px;
+    }
+    .box {
+      position: absolute;
+      top:30%;
+      left: 25%;
+      height: 330px;
+      width: 48vw;
+      background-color: white;
+      border-radius: 13px;
+      box-shadow: 2px 20px 19px 0px #d0d0d054;
+    }
+    .header h1 {
+      position: absolute;
+      top: 35%;
+      left: 44.5%;
+      font-size: 23px;
+      font-weight: 700;
+    }
+    p {
+      position: absolute;
+      top: 48%;
+      left: 44.5%;
+      font-weight: 500;
+      font-size: 15px;
+    }
+    .desk {
+      position: absolute;
+      top: 30%;
+      left: 25.05%;
+      height: 330px;
+      width: 300px;
+      border-radius: 13px 0 0 13px;
+    }
+   .avatar {
+     position: absolute;
+     top: 58%;
+     left: 44.5%;
+     height: 50px;
+     width: 50px;
+     border-radius: 50%;
+   }
+   .uname {
+     position: absolute;
+     top: 58%;
+     left: 48%;
+   }
+   .date {
+    position: absolute;
+     top: 61%;
+     left: 48%;
+     font-weight: 500;
+     font-size: 15px;
+     opacity: 80%;
+     color: gray;
+   }
+   #share {
+    position: absolute;
+    height: 18px;
+    width: 18px;
+     top: 10px;
+     left: 11px;
+     z-index: 1;
+     cursor: pointer;
+   }
+   #circle {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: hsl(210, 46%, 95%);
+    top: 485px;
+    left: 1240px;
+    cursor: pointer;
+
+   }
+   .Nbox {
+     
+     position: absolute;
+     top: 47%;
+     left: 61%;
+     height: 65px;
+     width: 300px;
+     background-color:hsl(217, 19%, 35%);
+     border-radius: 12px;
+     z-index: 2;
+   }
+   .traingle {
+    position: absolute;
+     top: 90%;
+     left: 43%;
+     height: 0;
+     width: 0;
+     border-left: 20px solid transparent;
+     border-right: 20px solid transparent;
+     border-top: 20px solid hsl(217, 19%, 35%);
+   }
+   .fa {
+     position: absolute;
+     top: 20px;
+     left: 140px;
+     height: 25px;
+     width: 25px;
+     cursor: pointer;
+   }
+   .pin {
+    position: absolute;
+     top: 20px;
+     left: 230px;
+     height: 25px;
+     width: 25px;
+     cursor: pointer;
+   }
+   .tw {
+    position: absolute;
+     top: 20px;
+     left: 185px;
+     height: 25px;
+     width: 25px;
+     cursor: pointer;
+   }
+   .sha {
+     position: absolute;
+     font-size: 15px;
+     top: 23px;
+     left: 35px;
+     color: white;
+     opacity: .5;
+     letter-spacing: 8px;
+   }
+  .circle-2 {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: hsl(214, 17%, 51%);
+    top: 94px;
+    left: 130px;
+    cursor: pointer;
+    z-index: 3;
+   }
+   .share-2 {
+    position: absolute;
+    height: 18px;
+    width: 18px;
+     top: 10px;
+     left: 11px;
+     z-index: 5;
+     cursor: pointer;
+     filter: brightness(0) invert(1);
+   }
+  </style>
+</head>
+<body>
+<div class="box"></div>
+     <img src="/images/drawers.jpg" alt="image of desk" class="desk">
+     <img src="/images/avatar-michelle.jpg" alt="avatar" class="avatar">
+     <div id="circle">
+      <img src="/images/icon-share.svg" id="share">
+     </div>
+     
+
+
+  <div class="Nbox">
+    <p class="sha">SHARE</p>  
+    <img src="/images/icon-facebook.svg" class="fa">
+    <img src="/images/icon-twitter.svg" class="tw">
+    <img src="/images/icon-pinterest.svg" class="pin">
+    <div class="traingle"></div>
+    <div class="circle-2">
+      <img src="/images/icon-share.svg" class="share-2">
+    </div>
+    
+  </div>
+  
+<div class="header">
+  <h1>Shift the overall look and feel by <br>
+   adding these wonderful touches to <br>
+    furniture in your home
+  </h1>
+  <p> Ever been in a room and felt like something was missing? <br>
+   Perhaps it felt slightly bare and uninviting. I’ve got some <br>
+  simple tips to help you make any room feel complete.
+  </p>
+  
+  <h4 class="uname"> Michelle Appleton</h4>
+       <div class="date">28 Jun 2020</div>
+  
+</div>
+  <script src="jquery-3.5.1.min.js"></script>
+</body>
+<script>
+  $(document).ready(function(){
+    $(".Nbox").fadeOut()
+    $("#circle").click(function(){ $(".Nbox").fadeIn()})
+    $(".circle-2").click(function(){ $(".Nbox").fadeOut()})
+    
+  })
+  
+</script>
+</html>
